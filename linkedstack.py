@@ -3,8 +3,8 @@ File: linkedstack.py
 Author: Ken Lambert
 """
 
-from tic_tac_toe.node import Node
-from tic_tac_toe.abstractstack import AbstractStack
+from node import Node
+from abstractstack import AbstractStack
 
 class LinkedStack(AbstractStack):
     """A link-based stack implementation."""

@@ -3,10 +3,10 @@ File: linkedbst.py
 Author: Ken Lambert
 """
 import math
-from tic_tac_toe.abstractcollection import AbstractCollection
-from tic_tac_toe.btnode import BSTNode
-from tic_tac_toe.linkedstack import LinkedStack
-from tic_tac_toe.linkedqueue import LinkedQueue
+from abstractcollection import AbstractCollection
+from btnode import BSTNode
+from linkedstack import LinkedStack
+from linkedqueue import LinkedQueue
 from math import log
 
 

@@ -3,8 +3,8 @@ File: linkedqueue.py
 Author: Ken Lambert
 """
 
-from tic_tac_toe.node import Node
-from tic_tac_toe.abstractcollection import AbstractCollection
+from node import Node
+from abstractcollection import AbstractCollection
 
 class LinkedQueue(AbstractCollection):
     """A link-based queue implementation."""
