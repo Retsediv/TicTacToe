@@ -186,7 +186,9 @@ class AlreadyFilledException(Exception):
 
 
 board = Board()
-print(board.choose_pos())
+board._board = [["O", "O", "O"], [None, None, None], [None, None, None]]
+print(Board.check_status(board._board))
+# print(board.choose_pos())
 # print(tree._root.data)
 # print(tree._root.left.data)
 # print(tree._root.right.data)

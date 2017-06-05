@@ -9,16 +9,23 @@ while True:
     b = game.choose_pos()
     game._board = b
 
+    if Board.check_status(game._board) is not None:
+        if Board.check_status(game._board) == "X":
+            print("WIN COMPUTER")
+        else:
+            print("WIN PLAYER")
+        break
+
     print(game)
 
     # Player
     if game.is_free_cell():
         while True:
-            posx = input("Enter x position")
-            posy = input("Enter y position")
+            posx = input("Enter x position(1, 2, 3): ")
+            posy = input("Enter y position(1, 2, 3): ")
 
             try:
-                game.put([int(posx), int(posy)], Board.USER_MARK)
+                game.put([int(posx) - 1, int(posy) - 1], Board.USER_MARK)
                 break
 
             except BadBoardPositionException:
@@ -27,8 +34,12 @@ while True:
                 print("Already Filled")
 
             if Board.check_status(game._board) is not None:
-                print(Board.check_status(game._board))
+                if Board.check_status(game._board) == "X":
+                    print("WIN COMPUTER")
+                else:
+                    print("WIN PLAYER")
+                break
+
     else:
-        # 50 50
         print("50% 50%)))")
 
